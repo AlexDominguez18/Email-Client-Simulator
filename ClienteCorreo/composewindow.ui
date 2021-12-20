@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ComposeWindow</class>
+ <widget class="QDialog" name="ComposeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>759</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Redactar Correo</string>
+  </property>
+  <widget class="QLabel" name="contentLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contenido:</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="contentTE">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>741</width>
+     <height>191</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="exitB">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>390</y>
+     <width>166</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+   <property name="centerButtons">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>741</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="idLabel">
+      <property name="text">
+       <string>Identificador:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="idLE"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="fromLabel">
+      <property name="text">
+       <string>Remitente:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="fromLE"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="toLabel">
+      <property name="text">
+       <string>Destinatario:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="toLE"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>100</y>
+     <width>741</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="ccLabel">
+      <property name="text">
+       <string>Cc:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="ccLE"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="ccoLabel">
+      <property name="text">
+       <string>Cco: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="ccoLE"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>741</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QLabel" name="affairLabel">
+      <property name="text">
+       <string>Asunto:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="affairLE"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

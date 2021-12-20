@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>853</width>
+    <height>495</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>853</width>
+    <height>495</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>853</width>
+    <height>495</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Cliente de Correo</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(243, 243, 243);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="viewSW">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QTabWidget" name="modulesTAB">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>861</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="tabShape">
+         <enum>QTabWidget::Rounded</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideNone</enum>
+        </property>
+        <property name="usesScrollButtons">
+         <bool>true</bool>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="tabsClosable">
+         <bool>false</bool>
+        </property>
+        <property name="movable">
+         <bool>true</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="mails">
+         <attribute name="title">
+          <string>Correos</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>100</y>
+            <width>141</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QPushButton" name="composePB">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Redactar</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="modifyPB">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Modificar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deletePB">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Eliminar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="searchesBT">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <italic>true</italic>
+               <bold>false</bold>
+               <underline>false</underline>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Búsquedas
+eficientes</string>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="logoLB">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>141</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="mailsTB">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>60</y>
+            <width>671</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">alternate-background-color: #606060;
+selection-background-color:#282828;
+</string>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="tabKeyNavigation">
+           <bool>true</bool>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="cornerButtonEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="rowCount">
+           <number>0</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>FECHA</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>HORA</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>FROM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TO</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ASUNTO</string>
+           </property>
+          </column>
+         </widget>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>20</y>
+            <width>671</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLineEdit" name="searchLE">
+             <property name="placeholderText">
+              <string>Identificador o remitente...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="searchBT">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Buscar...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="copies">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <attribute name="title">
+          <string>Copias CSV</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>132</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QPushButton" name="modifyCopy">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Modificar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteCopy">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Eliminar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="cipherCB">
+             <property name="text">
+              <string>Cifrar copias</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Sources/cipher.png</normaloff>../Sources/cipher.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="logoLB_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>141</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>20</y>
+            <width>671</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="searchCopy">
+             <property name="placeholderText">
+              <string>Identificador...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="searchCopyBT">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Buscar...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QTableWidget" name="copiesTB">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>60</y>
+            <width>671</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectColumns</enum>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>FECHA</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>HORA</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>FROM</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>TO</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>ASUNTO</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>CONTENIDO</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string/>
+           </property>
+          </column>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="copiesP">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <attribute name="title">
+          <string>Copias Propietaro</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>20</y>
+            <width>671</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLineEdit" name="searchPCopy">
+             <property name="placeholderText">
+              <string>Identificador...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="searchPCopyBT">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Buscar...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_5">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>141</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QPushButton" name="modifyPCopyBT">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Modificar</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deletePCopyBT">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Eliminar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QTableWidget" name="copiesPTB">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>60</y>
+            <width>671</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectColumns</enum>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>FECHA</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>HORA</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>FROM</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>TO</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>ASUNTO</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>CONTENIDO</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string/>
+           </property>
+          </column>
+         </widget>
+         <widget class="QLabel" name="logoLB_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>141</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>853</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
